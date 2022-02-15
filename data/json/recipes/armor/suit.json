@@ -514,7 +514,7 @@
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
     "difficulty": 2,
-    "time": "1 h 45 m",
+    "time": "5 m",
     "reversible": true,
     "autolearn": true,
     "flags": [ "NO_RESIZE" ],
@@ -537,20 +537,28 @@
   {
     "result": "kevlar_chainmail_hauberk",
     "type": "recipe",
-    "copy-from": "chainmail_hauberk",
+    "copy-from": "chainmail_suit_hauberk",
+    "activity_level": "LIGHT_EXERCISE",
     "components": [
-      [ [ "xl_chainmail_vest", 1 ] ],
-      [ [ "xl_chainmail_arms", 1 ] ],
-      [ [ "xl_chainmail_legs", 1 ] ],
-      [ [ "xl_k_gambeson", 1 ] ],
-      [ [ "xl_k_gambeson_pants", 1 ] ]
+      [ [ "chainmail_vest", 1 ] ],
+      [ [ "chainmail_arms", 1 ] ],
+      [ [ "chainmail_legs", 1 ] ],
+      [ [ "k_gambeson", 1 ] ],
+      [ [ "k_gambeson_pants", 1 ] ]
     ]
   },
   {
     "result": "kevlar_chainmail_hauberk_xs",
     "type": "recipe",
     "copy-from": "kevlar_chainmail_hauberk",
-    "components": [ [ [ "chainmail_vest", 1 ] ], [ [ "chainmail_arms", 1 ] ], [ [ "chainmail_legs", 1 ] ], [ [ "k_gambeson", 1 ] ] ]
+    "activity_level": "LIGHT_EXERCISE",
+    "components": [
+      [ [ "chainmail_vest", 1 ], [ "xs_chainmail_vest", 1 ] ],
+      [ [ "chainmail_arms", 1 ], [ "xs_chainmail_arms", 1 ] ],
+      [ [ "chainmail_legs", 1 ], [ "xs_chainmail_legs", 1 ] ],
+      [ [ "k_gambeson", 1 ], [ "k_gambeson_xs", 1 ] ],
+      [ [ "k_gambeson_pants", 1 ], [ "xs_k_gambeson_pants", 1 ] ]
+    ]
   },
   {
     "result": "xl_chainmail_hauberk",
@@ -568,7 +576,8 @@
   {
     "result": "xl_kevlar_chainmail_hauberk",
     "type": "recipe",
-    "copy-from": "xl_chainmail_hauberk",
+    "copy-from": "kevlar_chainmail_hauberk",
+    "activity_level": "LIGHT_EXERCISE",
     "components": [
       [ [ "xl_chainmail_vest", 1 ] ],
       [ [ "xl_chainmail_arms", 1 ] ],
@@ -585,7 +594,7 @@
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
     "difficulty": 3,
-    "time": "1 h 50 m",
+    "time": "5 m",
     "reversible": true,
     "autolearn": true,
     "flags": [ "NO_RESIZE" ],
@@ -615,12 +624,14 @@
   {
     "result": "kevlar_chainmail_suit",
     "type": "recipe",
-    "copy-from": "chainmail_suit",
+    "copy-from": "chainmail_suit_hauberk",
+    "activity_level": "LIGHT_EXERCISE",
     "components": [
       [ [ "chainmail_hood", 1 ] ],
       [ [ "chainmail_vest", 1 ] ],
       [ [ "chainmail_arms", 1 ] ],
       [ [ "chainmail_legs", 1 ] ],
+      [ [ "k_gambeson_hood", 1 ] ],
       [ [ "k_gambeson", 1 ] ],
       [ [ "k_gambeson_pants", 1 ] ]
     ]
@@ -629,12 +640,29 @@
     "result": "kevlar_chainmail_suit_xs",
     "type": "recipe",
     "copy-from": "kevlar_chainmail_suit",
+    "activity_level": "LIGHT_EXERCISE",
     "components": [
-      [ [ "chainmail_hood", 1 ] ],
-      [ [ "chainmail_vest", 1 ] ],
-      [ [ "chainmail_arms", 1 ] ],
-      [ [ "chainmail_legs", 1 ] ],
-      [ [ "k_gambeson", 1 ] ]
+      [ [ "chainmail_hood", 1 ], [ "xs_chainmail_hood", 1 ] ],
+      [ [ "chainmail_vest", 1 ], [ "xs_chainmail_vest", 1 ] ],
+      [ [ "chainmail_arms", 1 ], [ "xs_chainmail_arms", 1 ] ],
+      [ [ "chainmail_legs", 1 ], [ "xs_chainmail_legs", 1 ] ],
+      [ [ "k_gambeson_hood", 1 ], [ "xs_k_gambeson_hood", 1 ] ],
+      [ [ "k_gambeson", 1 ], [ "k_gambeson_xs", 1 ] ],
+      [ [ "k_gambeson_pants", 1 ], [ "xs_k_gambeson_pants", 1 ] ]
+    ]
+  },
+  {
+    "result": "kevlar_chainmail_suit_xs",
+    "type": "recipe",
+    "id_suffix": "hauberk",
+    "copy-from": "kevlar_chainmail_suit",
+    "activity_level": "LIGHT_EXERCISE",
+    "components": [
+      [ [ "chainmail_hood", 1 ], [ "xs_chainmail_hood", 1 ] ],
+      [ [ "chainmail_hauberk", 1 ], [ "chainmail_hauberk_xs", 1 ] ],
+      [ [ "k_gambeson_hood", 1 ], [ "xs_k_gambeson_hood", 1 ] ],
+      [ [ "k_gambeson", 1 ], [ "k_gambeson_xs", 1 ] ],
+      [ [ "k_gambeson_pants", 1 ], [ "xs_k_gambeson_pants", 1 ] ]
     ]
   },
   {
@@ -654,12 +682,28 @@
   {
     "result": "xl_kevlar_chainmail_suit",
     "type": "recipe",
-    "copy-from": "chainmail_suit",
+    "copy-from": "kevlar_chainmail_suit",
+    "activity_level": "LIGHT_EXERCISE",
     "components": [
       [ [ "xl_chainmail_hood", 1 ] ],
       [ [ "xl_chainmail_vest", 1 ] ],
       [ [ "xl_chainmail_arms", 1 ] ],
       [ [ "xl_chainmail_legs", 1 ] ],
+      [ [ "xl_k_gambeson_hood", 1 ] ],
+      [ [ "xl_k_gambeson", 1 ] ],
+      [ [ "xl_k_gambeson_pants", 1 ] ]
+    ]
+  },
+  {
+    "result": "xl_kevlar_chainmail_suit",
+    "type": "recipe",
+    "id_suffix": "hauberk",
+    "copy-from": "kevlar_chainmail_suit",
+    "activity_level": "LIGHT_EXERCISE",
+    "components": [
+      [ [ "xl_chainmail_hood", 1 ] ],
+      [ [ "xl_chainmail_hauberk", 1 ] ],
+      [ [ "xl_k_gambeson_hood", 1 ] ],
       [ [ "xl_k_gambeson", 1 ] ],
       [ [ "xl_k_gambeson_pants", 1 ] ]
     ]
@@ -676,18 +720,45 @@
     "time": "5 m",
     "reversible": true,
     "autolearn": true,
-    "flags": [ "NO_RESIZE" ],
+    "flags": [
+      "NO_RESIZE"
+    ],
     "proficiencies": [
       { "proficiency": "prof_closures", "fail_multiplier": 1 },
       { "proficiency": "prof_chain_armour", "fail_multiplier": 1 }
     ],
-    "components": [ [ [ "chainmail_hood", 1 ] ], [ [ "chainmail_hauberk", 1 ] ], [ [ "gambeson", 1 ] ], [ [ "gambeson_pants", 1 ] ] ]
+    "components": [
+      [ [ "chainmail_hood", 1 ] ],
+      [ [ "chainmail_hauberk", 1 ] ]
+    ]
   },
   {
     "result": "kevlar_chainmail_suit",
     "type": "recipe",
-    "copy-from": "chainmail_suit",
-    "components": [ [ [ "chainmail_hood", 1 ] ], [ [ "chainmail_hauberk", 1 ] ], [ [ "k_gambeson", 1 ] ], [ [ "k_gambeson_pants", 1 ] ] ]
+    "id_suffix": "hauberk",
+    "copy-from": "chainmail_suit_hauberk",
+    "activity_level": "LIGHT_EXERCISE",
+    "byproducts": [ [ "gambeson", 1 ] ],
+    "reversible": false,
+    "components": [
+      [ [ "chainmail_hood", 1 ] ],
+      [ [ "chainmail_hauberk", 1 ] ],
+      [ [ "k_gambeson_hood", 1 ] ],
+      [ [ "k_gambeson", 1 ] ],
+      [ [ "k_gambeson_pants", 1 ] ]
+    ]
+  },
+  {
+    "result": "kevlar_chainmail_suit",
+    "type": "recipe",
+    "id_suffix": "k_hauberk",
+    "copy-from": "chainmail_suit_hauberk",
+    "activity_level": "LIGHT_EXERCISE",
+    "components": [
+      [ [ "chainmail_hood", 1 ] ],
+      [ [ "kevlar_chainmail_hauberk", 1 ] ],
+      [ [ "k_gambeson_hood", 1 ] ]
+    ]
   },
   {
     "result": "xl_chainmail_suit",
@@ -708,20 +779,8 @@
     ],
     "components": [
       [ [ "xl_chainmail_hood", 1 ] ],
-      [ [ "xl_chainmail_hauberk", 1 ] ],
-      [ [ "xl_gambeson", 1 ] ],
-      [ [ "xl_gambeson_pants", 1 ] ]
-    ]
-  },
-  {
-    "result": "xl_kevlar_chainmail_suit",
-    "type": "recipe",
-    "copy-from": "chainmail_suit",
-    "components": [
-      [ [ "xl_chainmail_hood", 1 ] ],
-      [ [ "xl_chainmail_hauberk", 1 ] ],
-      [ [ "xl_k_gambeson", 1 ] ],
-      [ [ "xl_k_gambeson_pants", 1 ] ]
+      [ [ "xl_gambeson_hood", 1 ] ],
+      [ [ "xl_chainmail_hauberk", 1 ] ]
     ]
   },
   {
