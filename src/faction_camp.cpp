@@ -1477,7 +1477,6 @@ bool basecamp::handle_mission( const ui_mission_id &miss_id )
                 start_mission( miss_id.id, 4_days, true,
                                _( "departs to search for recruits…" ), false, {}, skill_gun, 0 );
             }
-            break;
 
         case Camp_Scouting:
         case Camp_Combat_Patrol:
@@ -3629,7 +3628,6 @@ bool basecamp::farm_return( const mission_id &miss_id, const tripoint_abs_omt &o
         op = farm_ops::harvest;
     } else {
         debugmsg( "Farm operations called with no matching operation" );
-        return false;
     }
 
     const std::string msg = _( "returns from working your fields…" );

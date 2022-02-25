@@ -147,8 +147,8 @@
   {
     "type": "terrain",
     "id": "t_rock_aluminum",
-    "name": "native aluminum",
-    "description": "A vein of aluminum.",
+    "name": "native alumimum",
+    "description": "A vein of alumimum.",
     "symbol": "#",
     "color": "light_gray",
     "move_cost": 0,
