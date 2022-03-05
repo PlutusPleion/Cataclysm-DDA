@@ -1480,16 +1480,32 @@
     "price": 24000,
     "price_postapoc": 1750,
     "to_hit": -3,
-    "material": [ "kevlar_layered", "nomex" ],
+    "material": [ "plastic", "nomex", "kevlar_rigid" ],
     "symbol": "[",
     "color": "light_gray",
     "armor": [
-      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 10 },
-      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 30 }
+      {
+        "material": [
+          { "type": "plastic", "covered_by_mat": 100, "thickness": 3.2 },
+          { "type": "kevlar_rigid", "covered_by_mat": 10, "thickness": 2 }
+        ],
+        "covers": [ "eyes" ],
+        "coverage": 100,
+        "encumbrance": [ 10, 10 ]
+      },
+      {
+        "material": [
+          { "type": "plastic", "covered_by_mat": 100, "thickness": 3.2 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 1.5 },
+          { "type": "kevlar_rigid", "covered_by_mat": 100, "thickness": 2 }
+        ],
+        "covers": [ "mouth" ],
+        "coverage": 100,
+        "encumbrance": [ 35, 35 ]
+      }
     ],
     "warmth": 15,
     "qualities": [ [ "GLARE", 1 ] ],
-    "material_thickness": 3,
     "environmental_protection": 1,
     "environmental_protection_with_filter": 15,
     "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "gasfilter_m": 100 } } ],
@@ -1558,11 +1574,23 @@
     "environmental_protection": 1,
     "environmental_protection_with_filter": 16,
     "armor": [
-      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 10 },
-      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 20 }
+      {
+        "material": [ { "type": "plastic", "covered_by_mat": 100, "thickness": 3.2 } ],
+        "covers": [ "eyes" ],
+        "coverage": 100,
+        "encumbrance": [ 5, 5 ]
+      },
+      {
+        "material": [
+          { "type": "plastic", "covered_by_mat": 100, "thickness": 3.2 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 1.5 }
+        ],
+        "covers": [ "mouth" ],
+        "coverage": 100,
+        "encumbrance": [ 20, 20 ]
+      }
     ],
-    "qualities": [ [ "GLARE", 1 ] ],
-    "material_thickness": 3
+    "qualities": [ [ "GLARE", 1 ] ]
   },
   {
     "id": "mask_hsurvivor",
