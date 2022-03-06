@@ -1473,7 +1473,7 @@
     "id": "mask_fsurvivor",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "survivor firemask" },
+    "name": { "str": "ballistic firemask" },
     "description": "A custom-built, Nomex-insulated gas mask that covers the face and eyes.  It provides excellent protection from heat, smoke, teargas, and shrapnel.  It must be prepared before use.",
     "weight": "708 g",
     "volume": "1250 ml",
@@ -1516,40 +1516,22 @@
   {
     "id": "mask_fsurvivorxl",
     "type": "TOOL_ARMOR",
-    "category": "armor",
-    "name": { "str": "XL survivor firemask" },
+    "copy-from": "mask_fsurvivor",
+    "looks_like": "mask_fsurvivor",
+    "name": { "str": "XL ballistic firemask" },
     "description": "A custom-built, Nomex-insulated gas mask that covers the face and eyes regardless of your state of mutation.  It provides excellent protection from heat, smoke, teargas, and shrapnel.  It must be prepared before use.",
-    "weight": "1108 g",
-    "volume": "1250 ml",
-    "price": 24000,
-    "price_postapoc": 1500,
-    "to_hit": -3,
-    "material": [ "kevlar_layered", "nomex" ],
-    "symbol": "[",
-    "color": "light_gray",
-    "armor": [
-      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 15 },
-      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 35 }
-    ],
-    "warmth": 15,
-    "qualities": [ [ "GLARE", 1 ] ],
-    "material_thickness": 3,
-    "environmental_protection": 1,
-    "environmental_protection_with_filter": 15,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "gasfilter_m": 100 } } ],
-    "ammo": "gasfilter_m",
-    "use_action": [ "GASMASK" ],
-    "flags": [ "VARSIZE", "STURDY", "OVERSIZE", "SUN_GLASSES", "SLEEP_IGNORE" ]
+    "proportional": { "weight": 1.13, "volume": 1.13, "price": 1.13 },
+    "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
     "id": "mask_fsurvivorxs",
     "type": "TOOL_ARMOR",
     "copy-from": "mask_fsurvivor",
     "looks_like": "mask_fsurvivor",
-    "name": { "str": "XS survivor firemask" },
+    "name": { "str": "XS ballistic firemask" },
     "description": "A custom-built, Nomex-insulated gas mask that covers the face and eyes.  It provides excellent protection from heat, smoke, teargas, and shrapnel.  It must be prepared before use.",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "VARSIZE", "STURDY", "SUN_GLASSES", "SLEEP_IGNORE", "UNDERSIZE" ]
+    "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
     "id": "mask_bunker",
