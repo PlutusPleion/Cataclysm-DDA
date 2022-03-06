@@ -3,7 +3,7 @@
     "id": "boots_fsurvivor",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "pair of survivor fireboots", "str_pl": "pairs of survivor fireboots" },
+    "name": { "str": "pair of flame-resistant kevlar boots", "str_pl": "pairs of flame-resistant kevlar boots" },
     "description": "A pair of customized, Kevlar-armored Nomex boots.  These will keep you alive, even when knee-deep in the flames.",
     "weight": "1980 g",
     "volume": "3 L",
@@ -11,32 +11,43 @@
     "price_postapoc": 6000,
     "to_hit": -1,
     "bashing": 1,
-    "material": [ "kevlar", "nomex" ],
+    "material": [ "nomex", "kevlar", "kevlar_layered" ],
     "symbol": "[",
     "looks_like": "boots_combat",
     "color": "light_gray",
     "warmth": 15,
-    "material_thickness": 5,
     "environmental_protection": 10,
     "flags": [ "VARSIZE", "WATERPROOF", "STURDY" ],
-    "armor": [ { "encumbrance": 35, "coverage": 100, "covers": [ "foot_l", "foot_r" ] } ]
+    "armor": [
+      {
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 2 },
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 },
+          { "type": "kevlar_layered", "covered_by_mat": 90, "thickness": 1 }
+        ],
+        "covers": [ "foot_l", "foot_r" ],
+        "coverage": 100,
+        "encumbrance": [ 25, 25 ]
+      }
+    ]
   },
   {
     "id": "xl_boots_fsurvivor",
     "type": "ARMOR",
-    "name": { "str": "pair of XL survivor fireboots", "str_pl": "pairs of XL survivor fireboots" },
+    "name": { "str": "pair of XL flame-resistant kevlar boots", "str_pl": "pairs of XL flame-resistant kevlar boots" },
     "copy-from": "boots_fsurvivor",
+    "looks_like": "boots_fsurvivor",
     "proportional": { "weight": 1.5, "volume": 1.5 },
-    "flags": [ "VARSIZE", "WATERPROOF", "OVERSIZE", "STURDY" ]
+    "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
     "id": "xs_boots_fsurvivor",
     "type": "ARMOR",
     "copy-from": "boots_fsurvivor",
     "looks_like": "boots_fsurvivor",
-    "name": { "str": "pair of XS survivor fireboots", "str_pl": "pairs of XS survivor fireboots" },
+    "name": { "str": "pair of XS flame-resistant kevlar boots", "str_pl": "pairs of XS flame-resistant kevlar boots" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "VARSIZE", "WATERPROOF", "STURDY", "UNDERSIZE" ]
+    "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
     "id": "boots_hsurvivor",
@@ -119,45 +130,56 @@
     "id": "gloves_fsurvivor",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "pair of survivor firegloves", "str_pl": "pairs of survivor firegloves" },
+    "name": { "str": "pair of flame-resistant kevlar gloves", "str_pl": "pairs of flame-resistant kevlar gloves" },
     "description": "A pair of customized, Kevlar-armored Nomex gloves.  These are a post-apocalyptic extension of what firefighters wore pre-Cataclysm.",
     "weight": "410 g",
     "volume": "1 L",
     "price": 18000,
     "price_postapoc": 2500,
     "to_hit": 2,
-    "material": [ "kevlar_layered", "nomex" ],
+    "material": [ "nomex", "kevlar", "kevlar_layered" ],
     "symbol": "[",
     "looks_like": "fire_gauntlets",
     "color": "light_gray",
     "warmth": 15,
-    "material_thickness": 3,
     "environmental_protection": 10,
     "flags": [ "VARSIZE", "WATERPROOF", "STURDY" ],
-    "armor": [ { "encumbrance": 30, "coverage": 100, "covers": [ "hand_l", "hand_r" ] } ]
+    "armor": [
+      {
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 2 },
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 },
+          { "type": "kevlar_layered", "covered_by_mat": 90, "thickness": 1 }
+        ],
+        "covers": [ "hand_l", "hand_r" ],
+        "coverage": 100,
+        "encumbrance": [ 25, 25 ]
+      }
+    ]
   },
   {
     "id": "xl_gloves_fsurvivor",
     "type": "ARMOR",
-    "name": { "str": "pair of XL survivor firegloves", "str_pl": "pairs of XL survivor firegloves" },
+    "name": { "str": "pair of XL flame-resistant kevlar gloves", "str_pl": "pairs of XL flame-resistant kevlar gloves" },
     "copy-from": "gloves_fsurvivor",
+    "looks_like": "gloves_fsurvivor",
     "proportional": { "weight": 1.5, "volume": 1.5 },
-    "flags": [ "VARSIZE", "STURDY", "OVERSIZE", "WATERPROOF" ]
+    "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
     "id": "xs_gloves_fsurvivor",
     "type": "ARMOR",
     "copy-from": "gloves_fsurvivor",
     "looks_like": "gloves_fsurvivor",
-    "name": { "str": "pair of XS survivor firegloves", "str_pl": "pairs of XS survivor firegloves" },
+    "name": { "str": "pair of XS flame-resistant kevlar gloves", "str_pl": "pairs of XS flame-resistant kevlar gloves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "VARSIZE", "WATERPROOF", "STURDY", "UNDERSIZE" ]
+    "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
     "id": "hood_fsurvivor",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "survivor firehood" },
+    "name": { "str": "flame-resistant kevlar hood" },
     "description": "A customized armored Nomex and Kevlar hood, strong and durable.",
     "weight": "1220 g",
     "volume": "1500 ml",
@@ -165,7 +187,7 @@
     "price_postapoc": 4000,
     "to_hit": -1,
     "bashing": 10,
-    "material": [ "kevlar_layered", "nomex" ],
+    "material": [ "nomex", "kevlar", "kevlar_layered" ],
     "symbol": "[",
     "looks_like": "hood_survivor",
     "color": "light_gray",
@@ -173,26 +195,36 @@
     "material_thickness": 5,
     "environmental_protection": 10,
     "flags": [ "VARSIZE", "WATERPROOF", "STURDY", "OUTER", "HELMET_COMPAT" ],
-    "armor": [ { "encumbrance": 30, "coverage": 100, "covers": [ "head" ] } ]
+    "armor": [
+      {
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 2 },
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 },
+          { "type": "kevlar_layered", "covered_by_mat": 90, "thickness": 1 }
+        ],
+        "covers": [ "head" ],
+        "coverage": 100,
+        "encumbrance": [ 25, 25 ]
+      }
+    ]
   },
   {
     "id": "xl_hood_fsurvivor",
     "type": "ARMOR",
     "copy-from": "hood_fsurvivor",
-    "name": { "str": "XL survivor firehood" },
-    "description": "A customized armored Nomex and Kevlar hood, very strong and durable.  Made in Muspelheim.",
+    "looks_like": "hood_fsurvivor",
+    "name": { "str": "XL flame-resistant kevlar hood" },
     "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
-    "flags": [ "VARSIZE", "STURDY", "OVERSIZE", "HELMET_COMPAT", "OUTER", "WATERPROOF" ]
+    "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
     "id": "xs_hood_fsurvivor",
     "type": "ARMOR",
     "copy-from": "hood_fsurvivor",
     "looks_like": "hood_fsurvivor",
-    "name": { "str": "XS survivor firehood" },
-    "description": "A customized armored Nomex and Kevlar hood, strong and durable.",
+    "name": { "str": "XS flame-resistant kevlar hood" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "VARSIZE", "WATERPROOF", "STURDY", "OUTER", "HELMET_COMPAT", "UNDERSIZE" ]
+    "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
     "id": "fsurvivor_suit",

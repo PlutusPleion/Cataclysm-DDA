@@ -639,7 +639,7 @@
     "id": "fsurvivor_jumpsuit",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "kevlar firesuit" },
+    "name": { "str": "flame-resistant kevlar jumpsuit" },
     "description": "A heavy, hand-built combination armor made from flame-resistant Nomex padded with layered kevlar.  Protects from the fire as well as from harm.",
     "weight": "6800 g",
     "volume": "11500 ml",
@@ -674,7 +674,7 @@
   {
     "id": "xs_fsurvivor_jumpsuit",
     "type": "ARMOR",
-    "name": { "str": "XS kevlar firesuit" },
+    "name": { "str": "XS flame-resistant kevlar jumpsuit" },
     "copy-from": "fsurvivor_jumpsuit",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
@@ -682,7 +682,7 @@
   {
     "id": "xl_fsurvivor_jumpsuit",
     "type": "ARMOR",
-    "name": { "str": "XL kevlar firesuit" },
+    "name": { "str": "XL flame-resistant kevlar jumpsuit" },
     "copy-from": "fsurvivor_jumpsuit",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
